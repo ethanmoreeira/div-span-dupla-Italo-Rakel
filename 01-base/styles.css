@@ -19,6 +19,17 @@ body {
 }
 .nav a:hover{ background:#cbd5e1; }
 
+/* Prompt 1 — bloco de introdução conceitual */
+.introducao{
+  max-width:1000px; margin:16px auto 0; padding:16px;
+  background:#f1f5f9; border-left:4px solid #2563eb; border-radius:8px;
+}
+.introducao h2{ margin:0 0 6px; color:#1e3a8a; }
+.introducao code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  background:#e2e8f0; padding:0 4px; border-radius:4px;
+}
+
 /* Conteúdo */
 .conteudo{ max-width:1000px; margin:24px auto; padding:0 16px; }
 
