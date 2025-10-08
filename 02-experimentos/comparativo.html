@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Comparativo — DIV x SPAN</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+      margin: 40px;
+    }
+
+    h1 { margin-bottom: 16px; }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .coluna {
+      background: #ffffff;
+      border: 3px dashed #94a3b8;
+      padding: 16px;
+      border-radius: 10px;
+    }
+
+    .coluna h2 { margin-top: 0; }
+
+    .coluna div {
+      background: #fef9c3;
+      border: 2px solid #eab308;
+      margin-bottom: 8px;
+      padding: 8px;
+    }
+
+    .coluna span {
+      background: #bae6fd;
+      border: 2px solid #0284c7;
+      padding: 4px 6px;
+      margin-right: 4px;
+      border-radius: 6px;
+    }
+
+    footer { margin-top: 20px; }
+    a { color: #334155; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>Experimento 3 — Comparativo lado a lado</h1>
+  <div class="container">
+    <section class="coluna">
+      <h2>DIV (block)</h2>
+      <div>Bloco 1</div>
+      <div>Bloco 2</div>
+      <div>Bloco 3</div>
+    </section>
+
+    <section class="coluna">
+      <h2>SPAN (inline)</h2>
+      <p><span>Span 1</span><span>Span 2</span><span>Span 3</span></p>
+    </section>
+  </div>
+
+  <footer>
+    <a href="inline-block.html">← Anterior: Inline-block</a> |
+    <a href="../03-bugs-e-correcoes/codigo-com-bugs.html">Próximo: Bugs →</a>
+  </footer>
+</body>
+</html>

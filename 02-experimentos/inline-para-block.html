@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inline → Block — Experimento</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 40px;
+      background: #f9fafb;
+      color: #1e293b;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+
+    /* SPAN inline padrão */
+    .inline span {
+      background: #fde68a;
+      border: 2px solid #f59e0b;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    /* SPAN transformado em BLOCK */
+    .block span {
+      display: block;
+      width: 200px;
+      height: 60px;
+      background: #a5b4fc;
+      border: 3px solid #4f46e5;
+      margin: 6px 0;
+      text-align: center;
+      line-height: 60px;
+      border-radius: 10px;
+    }
+
+    .box {
+      border: 2px dashed #ef4444;
+      padding: 16px;
+      margin-bottom: 20px;
+      background: #fff;
+    }
+
+    a { color: #334155; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>Experimento 1 — Transformando Inline em Block</h1>
+  <p>Os elementos <code>&lt;span&gt;</code> são originalmente inline. Vamos usar CSS para torná-los blocos completos (display:block).</p>
+
+  <section class="box inline">
+    <h2>Comportamento padrão (inline)</h2>
+    <p>Antes: <span>SP1</span> <span>SP2</span> <span>SP3</span> — tudo na mesma linha.</p>
+  </section>
+
+  <section class="box block">
+    <h2>Comportamento modificado (block)</h2>
+    <p>Depois:</p>
+    <span>SP1</span>
+    <span>SP2</span>
+    <span>SP3</span>
+  </section>
+
+  <footer>
+    <a href="../01-base/index.html">← Voltar à base</a> |
+    <a href="inline-block.html">Próximo: Inline-block →</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DIV x SPAN — Base (01)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topo">
+    <h1>DIV x SPAN — Demonstração Base</h1>
+    <p>Diferença prática entre elementos <strong>block-level</strong> (DIV) e <strong>inline-level</strong> (SPAN).</p>
+    <nav class="nav">
+      <a href="../02-experimentos/inline-para-block.html">Inline → Block</a>
+      <a href="../02-experimentos/inline-block.html">Inline-block</a>
+      <a href="../02-experimentos/comparativo.html">Comparativo</a>
+      <a href="../03-bugs-e-correcoes/codigo-com-bugs.html">Código com bugs</a>
+      <a href="../03-bugs-e-correcoes/correcoes.html">Correções</a>
+    </nav>
+  </header>
+
+  <main class="conteudo">
+    <section class="grid-cartoes">
+      <!-- Cada cartão é DIV (block). O ícone é SPAN (inline). -->
+      <div class="cartao">
+        <span class="icone" aria-hidden="true">📦</span>
+        <h2>DIV (block)</h2>
+        <p>Ocupa toda a largura e inicia em nova linha. Empilha verticalmente.</p>
+      </div>
+
+      <div class="cartao">
+        <span class="icone" aria-hidden="true">🧩</span>
+        <h2>SPAN (inline)</h2>
+        <p>Flui no texto <span class="marcado">sem quebrar linha</span>, ideal para destacar trechos.</p>
+      </div>
+
+      <div class="cartao">
+        <span class="icone" aria-hidden="true">🧱</span>
+        <h2>Box Model</h2>
+        <p>Content, padding, border e margin evidenciados por cores/bordas.</p>
+      </div>
+    </section>
+
+    <section class="exemplo-texto">
+      <h3>SPAN no meio do parágrafo</h3>
+      <p>Texto antes, <span class="marcado">trecho inline destacado</span>, texto depois — tudo na mesma linha.</p>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <small>Dupla: Ítalo & Rakel — 01-base</small>
+  </footer>
+</body>
+</html>
