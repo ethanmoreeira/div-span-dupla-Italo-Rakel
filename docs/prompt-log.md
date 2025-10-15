@@ -199,3 +199,25 @@ feat(llm2): Prompt 6 — comparativo visual DIV × SPAN × inline-block
 *Status:* ✅ Passo 2 concluído e validado.
 
 ---
+## 2025-10-08 — Passo 3 (Pessoa A — Ítalo, LLM #3: GPT-4)
+
+**Responsável:** Ítalo (Pessoa A)  
+**LLM usada:** GPT-4  
+
+**Resumo:** Nesta etapa foram inseridos bugs intencionais no código e, em seguida, corrigidos com auxílio da GPT-4. As correções foram documentadas abaixo.
+
+**Prompt 7 — Correções de Bugs:**  
+> Corrija os erros de sintaxe no arquivo `codigo-com-bugs.html` e explique cada correção.
+
+**Resposta da LLM (resumo):**  
+- Corrigiu `<di>` para `<div>`, garantindo que o elemento seja reconhecido como block-level:contentReference[oaicite:5]{index=5}.  
+- Adicionou o ponto-e-vírgula ausente em `.cartao { color: blue; }`, separando corretamente as declarações de CSS.  
+- Corrigiu `bacgroud-color` para `background-color`, aplicando corretamente a cor de fundo.  
+- Fechou a tag `<div>` que estava faltando, restaurando a hierarquia correta dos elementos.  
+
+**Aplicação:**  
+- **Arquivo:** `03-bugs-e-correcoes/codigo-com-bugs.html` (código corrigido).  
+- Foram incluídos comentários explicativos para cada correção no próprio arquivo.  
+
+**Commit:** feat(llm3): Prompt 7 — correções de bugs com GPT-4  
+

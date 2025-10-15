@@ -26,15 +26,26 @@ As duas versões trabalharam sobre o mesmo tema:
 
 ## 2. Critérios de Avaliação
 
-| Critério | GPT-5 (Pessoa A) | Perplexity (Pessoa B) |
-|:--|:--|:--|
-| *1. Clareza nas explicações* | Explicações técnicas e bem estruturadas, com termos precisos e exemplos diretos. | Explicações mais curtas e objetivas, com foco prático e menos terminologia técnica. |
-| *2. Qualidade do código HTML/CSS* | Código limpo, indentação consistente e comentários didáticos; usou landmarks semânticos. | Código funcional e conciso, com exemplos bem separados e boas práticas mantidas. |
-| *3. Correção técnica (semântica e sintaxe)* | 100% válido em HTML5 e CSS3; uso correto de propriedades. | 99% correto; pequeno risco de variação estética, mas sem erros estruturais. |
-| *4. Didática (clareza visual e pedagógica)* | Fortemente didático, com cores e comentários guiando o leitor. | Visual mais simples e direto; ótimo para demonstração objetiva. |
-| *5. Uso de boas práticas e acessibilidade* | Usou landmarks (header, main, footer), aria-label e ícones com aria-hidden="true". | Manteve estrutura semântica, mas reduziu metadados de acessibilidade. |
-| *6. Originalidade nas respostas* | Ofereceu justificativas detalhadas e contextualização teórica. | Focou em exemplos e experimentos práticos (inline→block, inline-block). |
-| *7. Capacidade de depuração e adaptação* | Explicou como cada camada do Box Model afeta o layout. | Destacou as diferenças de comportamento entre SPAN e DIV em execução. |
+# Tabela de notas (0–5)
+
+| Critério (0–5) | LLM #1 — GPT-5 (Ítalo) | LLM #2 — Perplexity (Rakel) | Observações |
+|:--|:--:|:--:|:--|
+| Correção técnica (block/inline/inline-block) | 5 | 4 | GPT-5 manteve semântica e sintaxe impecáveis; Perplexity correto, com poucos detalhes omitidos |
+| HTML/CSS semântico e limpo | 5 | 4 | Estrutura com landmarks e navegação; LLM #2 direto e funcional |
+| Depuração (bugs encontrados e fixados) | 5 | 4 | Diagnóstico e correção claros; LLM #2 acertou soluções com menos explicação |
+| Clareza das explicações | 5 | 4 | LLM #1 mais didático; LLM #2 mais objetivo |
+| Acessibilidade mínima | 4 | 3 | Uso de lang e landmarks; ainda há espaço para rótulos/aria em exemplos |
+| **Média** | **4.8** | **3.8** |  |
+
+# Comparativo de LLMs (GPT-5 vs Perplexity)
+
+| Critério      | GPT-4 (Ítalo)                                       | Perplexity (Rakel)                                      |
+|---------------|-----------------------------------------------------|---------------------------------------------------------|
+| **Clareza**   | Respostas mais detalhadas e coesas, facilitando a compreensão geral. | Respostas em formato de pontos; claras, mas menos elaboradas que o GPT-4. |
+| **Corretude** | Geralmente muito preciso e consistente com conceitos técnicos (ex.: Box Model). | Preciso nas explicações básicas; em alguns casos faltou detalhamento na sintaxe. |
+| **Utilidade** | Forneceu explicações aprofundadas e exemplos completos, úteis para aprendizado. | Útil para gerar estrutura inicial; exigiu revisão adicional para detalhes. |
+| **Criatividade** | Introduziu explicações originais e exemplos variados além do óbvio. | Criativo nos exemplos visuais, mas seguiu respostas mais objetivas. |
+
 
 ---
 

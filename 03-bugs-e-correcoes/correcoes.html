@@ -2,34 +2,37 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Código com Bugs — DIV x SPAN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Correções — DIV x SPAN</title>
   <style>
-    /* BUG #1: width/height em inline não surtem efeito (SPAN) */
+    /* Correção #1: usar inline-block para aplicar width/height em SPAN */
     .tag-span {
-      display: inline;          /* inline por padrão */
-      width: 200px;             /* não aplicada em inline */
-      height: 60px;             /* não aplicada em inline */
+      display: inline-block;    /* agora width/height funcionam */
+      width: 200px;
+      height: 60px;
       background: #ffd1dc;
       padding: 8px;
+      line-height: 44px;        /* centralização vertical do texto */
+      text-align: center;
     }
 
-    /* BUG #2: propriedade inválida (typo) */
+    /* Correção #2: propriedade correta */
     .titulo {
-      font-wieght: bold;        /* ERRO: 'wieght' -> 'weight' */
+      font-weight: bold;        /* corrigido */
       font-size: 20px;
     }
 
-    /* BUG #3: seletor errado não bate no elemento */
-    div.cartao-primario {
+    /* Correção #3: seletor que bate no elemento real (article) */
+    article.cartao-primario {
       background: #d1ffd6;
       border: 2px solid #28a745;
       padding: 10px;
     }
 
-    /* BUG #4: margem vertical em inline não afeta layout como esperado */
+    /* Correção #4: tornar inline-block para margens verticais surtirem efeito */
     .badge-inline {
-      display: inline;          /* inline */
-      margin-top: 20px;         /* não “empurra” como esperado em inline */
+      display: inline-block;
+      margin-top: 20px;
       margin-bottom: 20px;
       background: #ffe9b3;
       padding: 4px 8px;
@@ -37,29 +40,29 @@
   </style>
 </head>
 <body>
-  <h1 class="titulo">Exemplos com Bugs</h1>
+  <h1 class="titulo">Exemplos Corrigidos</h1>
 
   <section>
-    <h2>Bug #1 — SPAN com width/height</h2>
-    <p>Antes: <span class="tag-span">Span “grande” (não funciona)</span> depois do texto.</p>
+    <h2>Correção #1 — SPAN com width/height</h2>
+    <p>Agora: <span class="tag-span">Span “grande” (funciona)</span> aplicado com <code>display:inline-block</code>.</p>
   </section>
 
   <section>
-    <h2>Bug #2 — Propriedade CSS com typo</h2>
-    <p>O título acima deveria estar <strong>bold</strong>, mas não está.</p>
+    <h2>Correção #2 — Propriedade CSS corrigida</h2>
+    <p>O título acima está em <strong>negrito</strong> após corrigir <code>font-weight</code>.</p>
   </section>
 
   <section>
-    <h2>Bug #3 — Seletor não atinge o alvo</h2>
-    <!-- O seletor no CSS espera 'div.cartao-primario', mas aqui está 'article' -->
-    <article class="cartao-primario">Sou o card primário, mas não recebo estilo.</article>
+    <h2>Correção #3 — Seletor atinge o alvo</h2>
+    <!-- CSS corrigido para atingir 'article.cartao-primario' -->
+    <article class="cartao-primario">Sou o card primário e agora recebo estilo.</article>
   </section>
 
   <section>
-    <h2>Bug #4 — Margens em inline</h2>
+    <h2>Correção #4 — Margens verticais funcionais</h2>
     <p>
       Texto antes <span class="badge-inline">Etiqueta</span> texto depois.
-      (As margens verticais não se comportam como esperado em inline)
+      (As margens verticais agora funcionam com inline-block)
     </p>
   </section>
 
@@ -67,6 +70,6 @@
   <p>Parágrafo sem fechamento
   -->
 
-  <footer><small>Dupla: Ítalo & Rakel — Passo 3 (bugs)</small></footer>
+  <footer><small>Dupla: Ítalo &amp; Rakel — Correções</small></footer>
 </body>
 </html>
