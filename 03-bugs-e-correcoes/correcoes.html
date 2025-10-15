@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Código com Bugs — DIV x SPAN</title>
+  <style>
+    /* BUG #1: width/height em inline não surtem efeito (SPAN) */
+    .tag-span {
+      display: inline;          /* inline por padrão */
+      width: 200px;             /* não aplicada em inline */
+      height: 60px;             /* não aplicada em inline */
+      background: #ffd1dc;
+      padding: 8px;
+    }
+
+    /* BUG #2: propriedade inválida (typo) */
+    .titulo {
+      font-wieght: bold;        /* ERRO: 'wieght' -> 'weight' */
+      font-size: 20px;
+    }
+
+    /* BUG #3: seletor errado não bate no elemento */
+    div.cartao-primario {
+      background: #d1ffd6;
+      border: 2px solid #28a745;
+      padding: 10px;
+    }
+
+    /* BUG #4: margem vertical em inline não afeta layout como esperado */
+    .badge-inline {
+      display: inline;          /* inline */
+      margin-top: 20px;         /* não “empurra” como esperado em inline */
+      margin-bottom: 20px;
+      background: #ffe9b3;
+      padding: 4px 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="titulo">Exemplos com Bugs</h1>
+
+  <section>
+    <h2>Bug #1 — SPAN com width/height</h2>
+    <p>Antes: <span class="tag-span">Span “grande” (não funciona)</span> depois do texto.</p>
+  </section>
+
+  <section>
+    <h2>Bug #2 — Propriedade CSS com typo</h2>
+    <p>O título acima deveria estar <strong>bold</strong>, mas não está.</p>
+  </section>
+
+  <section>
+    <h2>Bug #3 — Seletor não atinge o alvo</h2>
+    <!-- O seletor no CSS espera 'div.cartao-primario', mas aqui está 'article' -->
+    <article class="cartao-primario">Sou o card primário, mas não recebo estilo.</article>
+  </section>
+
+  <section>
+    <h2>Bug #4 — Margens em inline</h2>
+    <p>
+      Texto antes <span class="badge-inline">Etiqueta</span> texto depois.
+      (As margens verticais não se comportam como esperado em inline)
+    </p>
+  </section>
+
+  <!-- BUG #5 extra opcional: tag não fechada (comente se não quiser usar)
+  <p>Parágrafo sem fechamento
+  -->
+
+  <footer><small>Dupla: Ítalo & Rakel — Passo 3 (bugs)</small></footer>
+</body>
+</html>
