@@ -1,68 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Inline-block — Experimento</title>
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      margin: 40px;
-      background: #f9fafb;
-      color: #1e293b;
-    }
-
-    h1 { margin-bottom: 8px; }
-    p { margin-bottom: 20px; }
-
-    /* SPAN inline padrão */
-    .inline span {
-      background: #fef08a;
-      border: 2px solid #eab308;
-      padding: 2px 6px;
-      border-radius: 6px;
-    }
-
-    /* SPAN com inline-block */
-    .inlineblock span {
-      display: inline-block;
-      width: 120px;
-      height: 50px;
-      background: #a7f3d0;
-      border: 3px solid #059669;
-      text-align: center;
-      line-height: 50px;
-      border-radius: 8px;
-      margin-right: 8px;
-    }
-
-    .box {
-      border: 2px dashed #ef4444;
-      padding: 16px;
-      margin-bottom: 20px;
-      background: #fff;
-    }
-
-    a { color: #334155; text-decoration: none; }
-  </style>
+<meta charset="UTF-8" />
+<title>Display Inline-block</title>
+<style>
+  .inline-block-span {
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    background-color: lightcoral;
+    line-height: 60px;
+    color: white;
+    text-align: center;
+    margin-right: 8px;
+  }
+</style>
 </head>
 <body>
-  <h1>Experimento 2 — Inline-block</h1>
-  <p>O modo <code>display:inline-block</code> mantém os elementos na mesma linha, mas permite definir <strong>largura</strong> e <strong>altura</strong>.</p>
-
-  <section class="box inline">
-    <h2>Comportamento padrão (inline)</h2>
-    <p>Antes: <span>SP1</span> <span>SP2</span> <span>SP3</span></p>
-  </section>
-
-  <section class="box inlineblock">
-    <h2>Comportamento modificado (inline-block)</h2>
-    <p>Depois: <span>SP1</span> <span>SP2</span> <span>SP3</span></p>
-  </section>
-
-  <footer>
-    <a href="inline-para-block.html">← Anterior: Inline → Block</a> |
-    <a href="comparativo.html">Próximo: Comparativo →</a>
-  </footer>
+  <h1>Display Inline-block</h1>
+  <span class="inline-block-span">Bloco 1</span>
+  <span class="inline-block-span">Bloco 2</span>
+  <footer><small>Dupla: �talo & Rakel � Prompt 5</small></footer>
 </body>
 </html>
