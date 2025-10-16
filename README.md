@@ -1,4 +1,4 @@
-﻿# DIV × SPAN — Projeto da dupla Ítalo & Rakel
+# DIV × SPAN — Projeto da dupla Ítalo & Rakel
 
 Este repositório acompanha o projeto da disciplina **Desenvolvimento de Web Sites**:
 - Exemplos: block (DIV), inline (SPAN) e inline-block
@@ -21,4 +21,4 @@ Este repositório acompanha o projeto da disciplina **Desenvolvimento de Web Sit
 - Ítalo (GitHub: ethanmoreeira)  
 - Rakel (GitHub: RakelGarcia10)  
 
-**LLMs utilizadas:** GPT-4 e Perplexity (cada autor utilizou uma LLM diferente em cada fase do projeto).
+**LLMs utilizadas:** GPT-5 e Perplexity (cada autor utilizou uma LLM diferente em cada fase do projeto).
